@@ -1,0 +1,34 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.Python
+*.egg-info/
+
+# Environment / secrets
+.env
+.env.local
+
+# Project data (large, regenerable — don't commit)
+data/raw_pdfs/
+data/parsed/
+data/bm25.pkl
+data/qdrant_storage/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Docker
+*.log
+
+# Fly.io / Railway (keep configs, ignore local overrides if any)
+.railway/
