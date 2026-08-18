@@ -1,34 +1,47 @@
-# Python
+# Virtual Environments
 venv/
-__pycache__/
-*.pyc
-*.pyo
+.venv/
+env/
+ENV/
 .Python
-*.egg-info/
 
-# Environment / secrets
+# Byte-code / Cache
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Environment Variables & Secrets
 .env
 .env.local
-
-# Project data (large, regenerable — don't commit)
-data/raw_pdfs/
-data/parsed/
-data/bm25.pkl
-data/qdrant_storage/
-
-# Streamlit
+.env.*.local
 .streamlit/secrets.toml
 
-# OS junk
+# Project Data & Vector Stores
+data/raw_pdfs/*
+!data/raw_pdfs/.gitkeep
+data/parsed/*
+!data/parsed/.gitkeep
+data/bm25.pkl
+data/qdrant_storage/
+data/chroma_db/
+*.sqlite3
+*.db
+
+# Streamlit Cache
+.streamlit/*.sqlite3
+
+# Logs & Docker
+*.log
+docker-compose.override.yml
+
+# IDE & OS Metadata
+.vscode/
+.idea/
 .DS_Store
 Thumbs.db
 
-# IDE
-.vscode/
-.idea/
-
-# Docker
-*.log
-
-# Fly.io / Railway (keep configs, ignore local overrides if any)
+# Deployment Platforms
 .railway/
+.fly/
